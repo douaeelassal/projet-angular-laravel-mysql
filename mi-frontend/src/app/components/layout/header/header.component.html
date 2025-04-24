@@ -1,0 +1,33 @@
+<header class="header">
+    <div class="container">
+      <div class="logo">
+        <a routerLink="/">BUYKI</a>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a></li>
+          
+          <!-- Liens pour visiteurs non connectés -->
+          <ng-container *ngIf="!authService.isLoggedIn()">
+            <li><a routerLink="/login" routerLinkActive="active">Connexion</a></li>
+            <li><a routerLink="/register" routerLinkActive="active">Inscription</a></li>
+          </ng-container>
+          
+          <!-- Liens pour utilisateurs connectés -->
+          <ng-container *ngIf="authService.isLoggedIn()">
+            <!-- Liens pour acheteurs -->
+            <li *ngIf="authService.isBuyer()"><a routerLink="/orders" routerLinkActive="active">Mes Commandes</a></li>
+            
+            <!-- Liens pour vendeurs -->
+            <li *ngIf="authService.isSeller()"><a routerLink="/my-products" routerLinkActive="active">Mes Produits</a></li>
+            <li *ngIf="authService.isSeller()"><a routerLink="/add-product" routerLinkActive="active">Ajouter un Produit</a></li>
+            
+            <!-- Liens communs aux deux types d'utilisateurs -->
+            <li><a routerLink="/conversations" routerLinkActive="active">Messages</a></li>
+            <li><a routerLink="/profile" routerLinkActive="active">Profil</a></li>
+            <li><a href="#" (click)="logout($event)">Déconnexion</a></li>
+          </ng-container>
+        </ul>
+      </nav>
+    </div>
+  </header>

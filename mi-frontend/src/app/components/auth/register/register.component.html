@@ -1,0 +1,66 @@
+<div class="register-container">
+    <div class="register-card">
+      <h2>Inscription</h2>
+      <p class="register-subtitle">Créez votre compte BUYKI</p>
+      
+      <form class="register-form">
+        <div class="form-group">
+          <label for="name">Nom complet</label>
+          <input type="text" id="name" class="form-control" placeholder="Votre nom complet">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="Votre adresse email">
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" class="form-control" placeholder="Choisissez un mot de passe">
+        </div>
+        
+        <div class="form-group">
+          <label for="password_confirmation">Confirmation du mot de passe</label>
+          <input type="password" id="password_confirmation" class="form-control" placeholder="Confirmez votre mot de passe">
+        </div>
+        
+        <div class="form-group">
+          <label>Type de compte</label>
+          <div class="account-type-options">
+            <div class="account-option">
+              <input type="radio" id="buyer" name="account_type" value="buyer" checked>
+              <label for="buyer">
+                <span class="radio-button"></span>
+                <div>
+                  <span class="option-title">Acheteur</span>
+                  <span class="option-description">Je souhaite acheter des produits</span>
+                </div>
+              </label>
+            </div>
+            
+            <div class="account-option">
+              <input type="radio" id="seller" name="account_type" value="seller">
+              <label for="seller">
+                <span class="radio-button"></span>
+                <div>
+                  <span class="option-title">Vendeur</span>
+                  <span class="option-description">Je souhaite vendre des produits</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-check">
+          <input type="checkbox" id="terms" class="form-check-input">
+          <label for="terms" class="form-check-label">J'accepte les <a href="#">conditions d'utilisation</a> et la <a href="#">politique de confidentialité</a></label>
+        </div>
+        
+        <button type="submit" class="btn-register">S'inscrire</button>
+      </form>
+      
+      <div class="register-footer">
+        <p>Vous avez déjà un compte ? <a routerLink="/login">Connectez-vous</a></p>
+      </div>
+    </div>
+  </div>

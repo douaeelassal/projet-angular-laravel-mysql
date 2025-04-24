@@ -1,0 +1,187 @@
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 30px 20px;
+  }
+  
+  .register-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+  }
+  
+  h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .register-subtitle {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .register-form {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .account-type-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .account-option {
+    flex: 1;
+  }
+  
+  .account-option input[type="radio"] {
+    display: none;
+  }
+  
+  .account-option label {
+    display: flex;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .account-option input[type="radio"]:checked + label {
+    border-color: #3498db;
+    background-color: #f0f7fc;
+  }
+  
+  .radio-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+  }
+  
+  .account-option input[type="radio"]:checked + label .radio-button {
+    border-color: #3498db;
+  }
+  
+  .account-option input[type="radio"]:checked + label .radio-button:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    background-color: #3498db;
+    border-radius: 50%;
+  }
+  
+  .option-title {
+    display: block;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .option-description {
+    display: block;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+  }
+  
+  .form-check {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .form-check-input {
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+  
+  .form-check-label {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .form-check-label a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .form-check-label a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn-register {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-register:hover {
+    background-color: #2980b9;
+  }
+  
+  .register-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #7f8c8d;
+  }
+  
+  .register-footer a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 576px) {
+    .account-type-options {
+      flex-direction: column;
+    }
+  }

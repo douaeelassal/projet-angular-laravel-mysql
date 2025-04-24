@@ -1,0 +1,166 @@
+<div class="buyki-container">
+  <header class="main-header">
+    <div class="container">
+      <h1>BUYKI</h1>
+      <nav>
+        <ul>
+          <li><a href="javascript:void(0)" (click)="showTab('home')" [class.active]="activeTab === 'home'">Accueil</a></li>
+          <li><a href="javascript:void(0)" (click)="showTab('login')" [class.active]="activeTab === 'login'">Connexion</a></li>
+          <li><a href="javascript:void(0)" (click)="showTab('register')" [class.active]="activeTab === 'register'">Inscription</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Page d'accueil -->
+    <div *ngIf="activeTab === 'home'">
+      <h2>Produits disponibles</h2>
+      <p class="intro-text">Découvrez notre sélection d'objets d'occasion en excellent état.</p>
+      
+      <div class="product-grid">
+        <!-- Produit 1 -->
+        <div class="product-card">
+          <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+          <div class="product-info">
+            <h3>Smartphone Samsung Galaxy S21</h3>
+            <p>Utilisé pendant 1 an, parfait état, avec chargeur d'origine et coque de protection.</p>
+            <div class="product-meta">
+              <span class="price">250 €</span>
+              <span class="seller">Vendeur: Jean D.</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-view">Voir détails</button>
+              <button class="btn-buy">Acheter</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produit 2 -->
+        <div class="product-card">
+          <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+          <div class="product-info">
+            <h3>Laptop Dell Inspiron</h3>
+            <p>8GB RAM, SSD 256GB, écran 15 pouces, état comme neuf. Idéal pour travail et études.</p>
+            <div class="product-meta">
+              <span class="price">450 €</span>
+              <span class="seller">Vendeur: Marie L.</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-view">Voir détails</button>
+              <button class="btn-buy">Acheter</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produit 3 -->
+        <div class="product-card">
+          <div class="product-image" style="background-image: url('https://via.placeholder.com/300x200')"></div>
+          <div class="product-info">
+            <h3>Vélo de montagne Trek</h3>
+            <p>Vélo tout terrain, utilisé mais en bon état. Cadre aluminium, suspension avant, freins à disque.</p>
+            <div class="product-meta">
+              <span class="price">320 €</span>
+              <span class="seller">Vendeur: Thomas B.</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-view">Voir détails</button>
+              <button class="btn-buy">Acheter</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page de connexion -->
+    <div *ngIf="activeTab === 'login'">
+      <div class="auth-container">
+        <div class="auth-card">
+          <h2>Connexion</h2>
+          <p class="auth-subtitle">Accédez à votre compte BUYKI</p>
+
+          <form class="auth-form">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Votre adresse email">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <input type="password" id="password" class="form-control" placeholder="Votre mot de passe">
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="remember">
+              <label for="remember">Se souvenir de moi</label>
+            </div>
+
+            <button type="button" class="btn-auth">Se connecter</button>
+          </form>
+
+          <div class="auth-footer">
+            <p>Vous n'avez pas de compte? <a href="javascript:void(0)" (click)="showTab('register')">Inscrivez-vous</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page d'inscription -->
+    <div *ngIf="activeTab === 'register'">
+      <div class="auth-container">
+        <div class="auth-card">
+          <h2>Inscription</h2>
+          <p class="auth-subtitle">Créez votre compte BUYKI</p>
+
+          <form class="auth-form">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" class="form-control" placeholder="Votre nom complet">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-email">Email</label>
+              <input type="email" id="reg-email" class="form-control" placeholder="Votre adresse email">
+            </div>
+
+            <div class="form-group">
+              <label for="reg-password">Mot de passe</label>
+              <input type="password" id="reg-password" class="form-control" placeholder="Choisissez un mot de passe">
+            </div>
+
+            <div class="form-group">
+              <label for="password-confirm">Confirmation du mot de passe</label>
+              <input type="password" id="password-confirm" class="form-control" placeholder="Confirmez votre mot de passe">
+            </div>
+
+            <div class="form-group">
+              <label>Type de compte</label>
+              <div class="account-options">
+                <div class="account-option">
+                  <input type="radio" id="buyer" name="account_type" value="buyer" checked>
+                  <label for="buyer">Acheteur</label>
+                </div>
+                <div class="account-option">
+                  <input type="radio" id="seller" name="account_type" value="seller">
+                  <label for="seller">Vendeur</label>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="btn-auth">S'inscrire</button>
+          </form>
+
+          <div class="auth-footer">
+            <p>Vous avez déjà un compte? <a href="javascript:void(0)" (click)="showTab('login')">Connectez-vous</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 BUYKI - Tous droits réservés</p>
+    </div>
+  </footer>
+</div>
